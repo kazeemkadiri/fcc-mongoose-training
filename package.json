@@ -1,0 +1,11 @@
+{
+  "name": "fcc-mongoose-training",
+  "version": "1.0.0",
+  "description": "A training on how to use mongoose with mongodb",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kazeem Kadiri",
+  "license": "MIT"
+}
