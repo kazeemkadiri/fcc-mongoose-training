@@ -57,16 +57,16 @@ model.findOne(food, function(err, person){
 });*/
 
 //Use findOneAndUpdate to update a document
-/**const personName = {name:'qasim'};
-model.findOneAndUpdate(personName, {age:20}, {returnOriginal: false});
-*/
+const personName = {name:'qasim'};
+model.findOneAndUpdate(personName, {age:20}, {returnOriginal: false, useFindAndModify: true});
 
-/**model.findOne(personName, function(err, data){
+
+model.findOne(personName, function(err, data){
   console.log(data);
-});*/
+});
 
 //Delete a document using findByIdAndRemove
-const personId = {_id: "5f3b930eceecc93d9cadf840"}
+/**const personId = {_id: "5f3b930eceecc93d9cadf840"}
 model.findByIdAndRemove(personId, function(err, doc){
   console.log(doc);
-});
+});*/
