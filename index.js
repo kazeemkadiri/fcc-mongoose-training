@@ -43,6 +43,15 @@ model.findOne(food, function(err, person){
 
 //Search for a person with an id
 const personId = {_id: "5f3b930eceecc93d9cadf840"};
+/**model.findById(personId, function(err, person){
+  console.log(person);
+});*/
+
+//Search for a person, edit returned result and save
 model.findById(personId, function(err, person){
   console.log(person);
+  person.favoriteFoods.push("hamburger");
+  person.save(function(err, modPerson){
+    console.log(modPerson);
+  });
 });
