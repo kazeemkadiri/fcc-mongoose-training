@@ -28,8 +28,15 @@ const model = mongoose.model("Person",person);
 */
 
 //Search for a document by passing in an argument into the find method
-const personName = {name: "qasim"};
+/*const personName = {name: "qasim"};
 model.find(personName, function(err, document){
   if(err) console.log(err);
   console.log(document);
+});*/
+
+//Search for one person with a particular favorite food
+const food = {favoriteFoods: ["rice"]};
+model.findOne(food, function(err, person){
+  if(err) console.log(err);
+  console.log(person);
 });
