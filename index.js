@@ -35,8 +35,14 @@ model.find(personName, function(err, document){
 });*/
 
 //Search for one person with a particular favorite food
-const food = {favoriteFoods: ["rice"]};
+/**const food = {favoriteFoods: ["rice"]};
 model.findOne(food, function(err, person){
   if(err) console.log(err);
+  console.log(person);
+});*/
+
+//Search for a person with an id
+const personId = {_id: "5f3b930eceecc93d9cadf840"};
+model.findById(personId, function(err, person){
   console.log(person);
 });
