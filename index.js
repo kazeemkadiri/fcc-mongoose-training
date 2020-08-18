@@ -42,16 +42,31 @@ model.findOne(food, function(err, person){
 });*/
 
 //Search for a person with an id
-const personId = {_id: "5f3b930eceecc93d9cadf840"};
+/**const personId = {_id: "5f3b930eceecc93d9cadf840"};
 /**model.findById(personId, function(err, person){
   console.log(person);
 });*/
 
 //Search for a person, edit returned result and save
-model.findById(personId, function(err, person){
+/**model.findById(personId, function(err, person){
   console.log(person);
   person.favoriteFoods.push("hamburger");
   person.save(function(err, modPerson){
     console.log(modPerson);
   });
+});*/
+
+//Use findOneAndUpdate to update a document
+/**const personName = {name:'qasim'};
+model.findOneAndUpdate(personName, {age:20}, {returnOriginal: false});
+*/
+
+/**model.findOne(personName, function(err, data){
+  console.log(data);
+});*/
+
+//Delete a document using findByIdAndRemove
+const personId = {_id: "5f3b930eceecc93d9cadf840"}
+model.findByIdAndRemove(personId, function(err, doc){
+  console.log(doc);
 });
